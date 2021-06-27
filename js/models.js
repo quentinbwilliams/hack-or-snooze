@@ -23,7 +23,7 @@ class Story {
   /** Parses hostname out of URL and returns it. */
 
   getHostName() {
-    console.log(this.url);
+    return this.url.split("/")[2]; // url string split array 2nd index is the hostname
     // UNIMPLEMENTED: complete this function!
     // return "hostname.com";
   }
