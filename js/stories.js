@@ -1,7 +1,44 @@
 "use strict";
 
+/* 
+  CUSTOM HEADERS -- NEEDED FOR AUTHENTICATION
+*/
+
+funciton customHeaders() {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'sometoken' //TOKEN GOES HERE
+    }
+  }
+
+  axios
+    .post('https://', {
+      // PARAMS
+    }, config)
+    .then(res => showOutput(res))
+    .catch(err => console.error(err));
+
+}
+
+/*
+  CREATE A GLOBAL FOR TOKENS - Useful for multiple routes
+*/
+axios.defaults.headers.common[/* Token title */] = /* Token */
+
 // This is the global list of the stories, an instance of StoryList
 let storyList;
+
+/* 
+  AXIOS INSTANCE
+*/
+const axiosInstance = axios.create({
+  // Custom params
+  baseURL: ''
+})
+
+axiosInstance.get('/comments').then(res => showOutput(res));
+
 
 /** Get and show stories when site first loads. */
 

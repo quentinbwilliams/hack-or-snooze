@@ -2,6 +2,8 @@
 
 const baseURL = "https://hack-or-snooze-v3.herokuapp.com";
 
+// auth token:
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF0aXAiLCJpYXQiOjE2MjM3Nzk2NTF9.kyD9GNffARgKsE6qum6GCz94GvTHLwgv30mI3giABiM
 /******************************************************************************
  * Story: a single story in the system
  */
